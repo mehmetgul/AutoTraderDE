@@ -18,8 +18,8 @@ import java.net.URL;
 public class MyDriver {
     private static ThreadLocal<WebDriver> DriverPool = new ThreadLocal<>();
 
-    private MyDriver() {
-    }
+    private MyDriver() { }
+
     public static WebDriver get() {
         //if this thread doesn't have a web Driver yet - create it and add to pool
         if (DriverPool.get() == null) {
@@ -29,6 +29,7 @@ public class MyDriver {
             String browser = browserParamFromEnv == null ? ConfigurationReader.getProperty("browser") : browserParamFromEnv;
             switch (browser) {
                 case "chrome":
+
                     WebDriverManager.chromedriver().setup();
                     DriverPool.set(new ChromeDriver());
                     break;
