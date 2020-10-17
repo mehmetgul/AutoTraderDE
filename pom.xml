@@ -8,11 +8,10 @@
     <artifactId>AutoTraderDE</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.taget>11</maven.compiler.taget>
-
-
     </properties>
 
     <dependencies>
@@ -117,25 +116,5 @@
 
     </build>
 
-
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-
-    </properties>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>3.7.1</version>
-        </dependency>
-
-
-
-
-
-    </dependencies>
 
 </project>
