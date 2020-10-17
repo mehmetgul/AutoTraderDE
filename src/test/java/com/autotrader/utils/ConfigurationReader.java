@@ -14,7 +14,7 @@ public class ConfigurationReader {
         try {
 
             //File path of configuration.properties
-            FileInputStream fileInputStream = new FileInputStream("configuration.properties");
+            FileInputStream fileInputStream = new FileInputStream("configuration-qa.properties");
             //initialize properties object
             configFile = new Properties();
             //load configuration.properties file
