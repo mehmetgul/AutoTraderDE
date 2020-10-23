@@ -1,0 +1,160 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-23T14:05:13.951Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4700282540,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User verifies the search feature in Autotrader",
+        "description": "",
+        "id": ";user-verifies-the-search-feature-in-autotrader",
+        "after": [
+          {
+            "result": {
+              "duration": 61578,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 931866620,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is in landing page",
+            "match": {
+              "location": "MyStepdefs.userIsInLandingPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2985399393,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Verify that \"Browse by Make\" is present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Browse by Make\"",
+                  "offset": 12
+                }
+              ],
+              "location": "MyStepdefs.verifyThatIsPresent(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1220669832,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verify that \"Browse by Style\" is present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Browse by Style\"",
+                  "offset": 12
+                }
+              ],
+              "location": "MyStepdefs.verifyThatIsPresent(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1100892853,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Verify that \"Advanced Search\" button is present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Advanced Search\"",
+                  "offset": 12
+                }
+              ],
+              "location": "MyStepdefs.verifyThatButtonIsPresent(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2000981838,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify that search Button is present",
+            "match": {
+              "location": "MyStepdefs.verifyThatSearchButtonIsPresent()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6985635065,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Verify that \"Any Make\" and \"Any Model\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Any Make\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Any Model\"",
+                  "offset": 27
+                }
+              ],
+              "location": "MyStepdefs.verifyThatAnd(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/search.feature",
+    "tags": [
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
