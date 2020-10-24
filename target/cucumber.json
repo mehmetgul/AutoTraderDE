@@ -1,0 +1,226 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1814038588,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is in landing page",
+            "match": {
+              "location": "MyStepdefs.userIsInLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-24T15:59:49.225Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4582087334,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Happy path",
+        "description": "",
+        "id": "advanced-search;happy-path",
+        "after": [
+          {
+            "result": {
+              "duration": 186254,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1404215796,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on \"Advanced Search\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Advanced Search\"",
+                  "offset": 19
+                }
+              ],
+              "location": "AdvancedSearchStepDefs.theUserClicksOnButton(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 175463544,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "enters 30004 in the Zip Code text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30004",
+                  "offset": 7
+                }
+              ],
+              "location": "AdvancedSearchStepDefs.entersInTheZipCodeTextBox(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128553074,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "selects the \"Convertible\" check box under \"Style\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Convertible\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Style\"",
+                  "offset": 42
+                }
+              ],
+              "location": "AdvancedSearchStepDefs.selectsTheCheckBoxUnder(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 2017\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027CHE-PC\u0027, ip: \u0027192.168.0.171\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u002712.0.2\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)\r\n\tat org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)\r\n\tat com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsYear(AdvancedSearchStepDefs.java:32)\r\n\tat ✽.selects year \"From\" 2017 \"To\" 2020(file:src/test/resources/features/advancedSearch.feature:11)\r\n",
+              "duration": 20134998974,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "selects year \"From\" 2017 \"To\" 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"From\"",
+                  "offset": 13
+                },
+                {
+                  "val": "2017",
+                  "offset": 20
+                },
+                {
+                  "val": "\"To\"",
+                  "offset": 25
+                },
+                {
+                  "val": "2020",
+                  "offset": 30
+                }
+              ],
+              "location": "AdvancedSearchStepDefs.selectsYear(String,int,String,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 485020,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "selects \"BMW\" under \"Any Make\" from \"Make, Model \u0026 Trim\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BMW\"",
+                  "offset": 8
+                },
+                {
+                  "val": "\"Any Make\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Make, Model \u0026 Trim\"",
+                  "offset": 36
+                }
+              ],
+              "location": "AdvancedSearchStepDefs.selectsUnderFrom(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 668993,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "clicks \"Search\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Search\"",
+                  "offset": 7
+                }
+              ],
+              "location": "AdvancedSearchStepDefs.clicksButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 339438,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "gets search results",
+            "match": {
+              "location": "AdvancedSearchStepDefs.getsSearchResults()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Advanced Search",
+    "description": "",
+    "id": "advanced-search",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/advancedSearch.feature",
+    "tags": [
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -19,8 +19,13 @@ public class AdvancedSearchPage extends BasePage {
         return MyDriver.get().findElement(By.xpath("//div[text()='"+box+"']"));
     }
 
-    public WebElement selectYearFromTo(String grup, int year){
-        return MyDriver.get().findElement(By.xpath("//label[text()='"+grup+"']/../select/option[text()='"+year+"']"));
+    public WebElement selectFromOrTo(String startOrEnd){
+        String fromOrTo=null;
+        if (startOrEnd.equals("From")){
+            fromOrTo="start";
+        }else
+            fromOrTo="end";
+        return MyDriver.get().findElement(By.xpath("//select[starts-with(@name,'"+fromOrTo+"')]"));
     }
 
     @FindBy(xpath = "//select[@name='makeFilter0']")
@@ -29,13 +34,13 @@ public class AdvancedSearchPage extends BasePage {
     @FindBy(xpath = "//button[text()='Search']")
     public WebElement search;
 
-    /*
+
     @FindBy(name = "startYear")
     public WebElement startYear;
 
     @FindBy(name = "endYear")
     public WebElement endYear;
-     */
+
 
 
 

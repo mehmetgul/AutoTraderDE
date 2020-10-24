@@ -7,7 +7,9 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = "json:target/report.json",
+        plugin = {"json:target/cucumber.json",
+          "html:target/default-html-reports"
+        },
         glue = "com/autotrader/searchSteps",
         features = "src/test/resources/features/",
         dryRun= false,

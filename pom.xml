@@ -6,12 +6,12 @@
 
     <groupId>com.autotraderde</groupId>
     <artifactId>AutoTraderDE</artifactId>
-    <packaging>pom</packaging>
+    <!--<packaging>pom</packaging> -->
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.taget>11</maven.compiler.taget>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -55,8 +55,6 @@
             <artifactId>cucumber-junit</artifactId>
             <version>4.7.4</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>com.aventstack</groupId>
