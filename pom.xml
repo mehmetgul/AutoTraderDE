@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
+<<<<<<< HEAD
         <maven.compiler.taget>11</maven.compiler.taget>
 
 
@@ -117,6 +118,14 @@
 
     </build>
 
+=======
+        <maven.compiler.target>11</maven.compiler.target>
+>>>>>>> Fatihkesik
 
+    </properties>
+
+    <dependencies>
+        
+    </dependencies>
 
 </project>
