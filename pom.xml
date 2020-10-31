@@ -58,7 +58,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>4.7.4</version>
+            <version>5.7.0</version>
         </dependency>
 
         <!-- both up and down dependency should be the same version. -->
@@ -67,7 +67,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>4.7.4</version>
+            <version>5.7.0</version>
         </dependency>
 
 
