@@ -10,10 +10,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MyDriver {
     private static ThreadLocal<WebDriver> DriverPool = new ThreadLocal<>();
@@ -30,8 +33,25 @@ public class MyDriver {
             switch (browser) {
                 case "chrome":
 
+
                     WebDriverManager.chromedriver().setup();
-                    DriverPool.set(new ChromeDriver());
+                    DesiredCapabilities caps = new DesiredCapabilities();
+
+                    /**
+                     *We have disabled the cookies in below ChromeOptions
+                     */
+                    ChromeOptions options = new ChromeOptions();
+                    Map<String, Object> prefs = new HashMap<String, Object>();
+                    Map<String, Object> profile = new HashMap<String, Object>();
+                    Map<String, Object> contentSettings = new HashMap<String, Object>();
+
+                    contentSettings.put("cookies",2);
+                    profile.put("managed_default_content_settings",contentSettings);
+                    prefs.put("profile",profile);
+                    options.setExperimentalOption("prefs",prefs);
+                    caps.setCapability(ChromeOptions.CAPABILITY,options);
+
+                    DriverPool.set(new ChromeDriver(options));
                     break;
                 case "chrome_headless":
                     WebDriverManager.chromedriver().setup();
