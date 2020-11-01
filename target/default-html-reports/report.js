@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/search.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/advancedSearch.feature");
 formatter.feature({
-  "name": "Main page elements verification",
+  "name": "Advanced Search",
   "description": "",
   "keyword": "Feature",
   "tags": [
@@ -9,15 +9,10 @@ formatter.feature({
     }
   ]
 });
-formatter.scenario({
-  "name": "User verifies the search feature in Autotrader",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -32,57 +27,30 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Happy path",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
+});
 formatter.step({
-  "name": "Verify that \"Browse by Make\" is present",
-  "keyword": "Then "
+  "name": "the user clicks on \"Advanced Search\" button",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "MyStepdefs.verifyThatIsPresent(String)"
+  "location": "AdvancedSearchStepDefs.theUserClicksOnButton(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify that \"Browse by Style\" is present",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "MyStepdefs.verifyThatIsPresent(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify that \"Advanced Search\" button is present",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "MyStepdefs.verifyThatButtonIsPresent(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify that search Button is present",
+  "name": "enters 30004 in the Zip Code text box",
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyStepdefs.verifyThatSearchButtonIsPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify that \"Any Make\" and \"Any Model\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "MyStepdefs.verifyThatAnd(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
+  "location": "AdvancedSearchStepDefs.entersInTheZipCodeTextBox(int)"
 });
