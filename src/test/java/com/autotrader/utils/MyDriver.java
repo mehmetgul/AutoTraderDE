@@ -39,6 +39,9 @@ public class MyDriver {
 
                     /**
                      *We have disabled the cookies in below ChromeOptions
+                     * You need to add this feature to your configuration.properties
+                     * Add cookiesEnableDisable=2  (disable the cookies)
+                     * Add cookiesEnableDisable =0  (enable the cookies)
                      */
                     ChromeOptions options = new ChromeOptions();
                     Map<String, Object> prefs = new HashMap<String, Object>();
