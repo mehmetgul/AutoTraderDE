@@ -45,7 +45,7 @@ public class MyDriver {
                     Map<String, Object> profile = new HashMap<String, Object>();
                     Map<String, Object> contentSettings = new HashMap<String, Object>();
 
-                    contentSettings.put("cookies",2);
+                    contentSettings.put("cookies",ConfigurationReader.getProperty("cookiesEnableDisable"));
                     profile.put("managed_default_content_settings",contentSettings);
                     prefs.put("profile",profile);
                     options.setExperimentalOption("prefs",prefs);
