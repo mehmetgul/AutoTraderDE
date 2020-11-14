@@ -57,7 +57,7 @@ public class MyStepdefs {
 
 	@Then("Verify that {string} is present")
 	public void verifyThatIsPresent(String browse) {
-		System.out.println(MyDriver.get().manage().getCookies());
+
 		// Verify that "Browse By Make" is present
 
 		advancePage.verification(browse);
