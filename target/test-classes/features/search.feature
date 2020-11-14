@@ -1,4 +1,4 @@
-
+@wip
 Feature: Main page elements verification
 
   Scenario: User verifies the search feature in Autotrader

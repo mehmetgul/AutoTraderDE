@@ -1,21 +1,32 @@
 package com.autotrader.searchSteps;
-
+import com.autotrader.searchPages.AdvancedSearchPage;
+import com.autotrader.utils.MyDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AdvancedSearchStepDefs {
+    AdvancedSearchPage advancedSearchPage = new AdvancedSearchPage();
+
+    public AdvancedSearchStepDefs() {
+    }
 
     @When("the user clicks on {string} button")
     public void theUserClicksOnButton(String arg0) {
+        MyDriver.get().manage().deleteAllCookies();
+        this.advancedSearchPage.advancedSearch.click();
     }
 
     @And("enters {int} in the Zip Code text box")
-    public void entersInTheZipCodeTextBox(int arg0) {
+    public void entersInTheZipCodeTextBox(int zipcode) {
+        MyDriver.get().manage().deleteAllCookies();
+        this.advancedSearchPage.zipCode.sendKeys(new CharSequence[]{String.valueOf(zipcode)});
     }
 
     @And("selects the {string} check box under {string}")
-    public void selectsTheCheckBoxUnder(String arg0, String arg1) {
+    public void selectsTheCheckBoxUnder(String arg0, String box) {
+        MyDriver.get().manage().deleteAllCookies();
+        this.advancedSearchPage.selectCheckBox(arg0).click();
     }
 
     @And("selects year {string} {int} {string} {int}")

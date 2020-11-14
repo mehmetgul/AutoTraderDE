@@ -13,7 +13,7 @@ public abstract class BasePage {
     }
 
     public WebElement browseBy(String by){
-        return MyDriver.get().findElement(By.xpath("//button[text()='"+by+"']"));
+        return MyDriver.get().findElement(By.xpath("//*[text()='"+by+"']"));
     }
 
     @FindBy(xpath = "//a[text()='Advanced Search']")

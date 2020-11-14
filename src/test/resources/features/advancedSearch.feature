@@ -1,5 +1,4 @@
 
-
   Feature: Advanced Search
 
     Background:
