@@ -34,13 +34,10 @@ public class Base {
 	 *  arguments[0] = link web element, it can be any web element
 	 */
 	public void scrollDown(WebElement str) {
-		waitSomeTime(2000L);
 		JavascriptExecutor javascriptExecutor = (JavascriptExecutor) MyDriver.get();
 
 		javascriptExecutor.executeScript("arguments[0].scrollIntoView(true)",str);
 		//js.executeScript("window.scrollBy(0,50)");
-
-		waitSomeTime(2000L);
 
 	}
 

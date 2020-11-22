@@ -1,5 +1,9 @@
 Feature:
 
+  Background: chrome testing
+    Given user test with "chrome" browser
+
+
   Scenario: User verifies the search feature in Autotrader
     Given User is in landing page
     Then Verify that "Browse by Make" is present
