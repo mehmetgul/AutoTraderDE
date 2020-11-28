@@ -1,7 +1,7 @@
 Feature:
 
-  Background: chrome testing
-    Given user test with "chrome" browser
+ # Background: chrome testing
+  #  Given user test with "chrome" browser
 
 #
   Scenario: User verifies the search feature in Autotrader
@@ -23,4 +23,4 @@ Feature:
     Then User verifies that he is in result page
     Then User verifies that he sees only "BMW" cars in listing
     Then Display in console, the number of cars listed in result page
-    #
+
