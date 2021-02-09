@@ -30,7 +30,7 @@ public class MyStepdefs {
 	public void userIsInLandingPage() {
 
 		String actual = MyDriver.get().getTitle();
-		String expected = "Used and New Car Sales, Review - Autotrader";
+		String expected = "Search for Cars For Sale Online - Find a Car at Autotrader";
 		Assert.assertEquals(expected, actual);
 		// object i kullanarak log olusturuluyor.
 		logger.info("Landing page Assertion Successful");

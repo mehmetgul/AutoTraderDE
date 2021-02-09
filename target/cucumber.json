@@ -1,0 +1,224 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 42002400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is in landing page",
+            "match": {
+              "location": "com.autotrader.searchSteps.MyStepdefs.userIsInLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-09T22:11:11.933Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7850543500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.autotrader.searchSteps.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Happy path",
+        "description": "",
+        "id": "advanced-search;happy-path",
+        "after": [
+          {
+            "result": {
+              "duration": 764043700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.autotrader.searchSteps.Hooks.after(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 377021600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on \"Advanced Search\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Advanced Search\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.theUserClicksOnButton(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 538030800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "enters 30004 in the Zip Code text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30004",
+                  "offset": 7
+                }
+              ],
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.entersInTheZipCodeTextBox(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 434024800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "selects the \"Convertible\" check box under \"Style\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Convertible\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Style\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsTheCheckBoxUnder(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "selects year \"From\" 2017 \"To\" 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"From\"",
+                  "offset": 13
+                },
+                {
+                  "val": "2017",
+                  "offset": 20
+                },
+                {
+                  "val": "\"To\"",
+                  "offset": 25
+                },
+                {
+                  "val": "2020",
+                  "offset": 30
+                }
+              ],
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsYear(java.lang.String,int,java.lang.String,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "selects \"BMW\" under \"Any Make\" from \"Make, Model \u0026 Trim\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BMW\"",
+                  "offset": 8
+                },
+                {
+                  "val": "\"Any Make\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Make, Model \u0026 Trim\"",
+                  "offset": 36
+                }
+              ],
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsUnderFrom(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "clicks \"Search\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Search\"",
+                  "offset": 7
+                }
+              ],
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.clicksButton(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "gets search results",
+            "match": {
+              "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.getsSearchResults()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Advanced Search",
+    "description": "",
+    "id": "advanced-search",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/advancedSearch.feature",
+    "tags": [
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

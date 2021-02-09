@@ -22,7 +22,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "MyStepdefs.userIsInLandingPage()"
+  "location": "com.autotrader.searchSteps.MyStepdefs.userIsInLandingPage()"
 });
 formatter.result({
   "status": "passed"
@@ -42,7 +42,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "AdvancedSearchStepDefs.theUserClicksOnButton(String)"
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.theUserClicksOnButton(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -52,5 +52,62 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "AdvancedSearchStepDefs.entersInTheZipCodeTextBox(int)"
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.entersInTheZipCodeTextBox(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "selects the \"Convertible\" check box under \"Style\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsTheCheckBoxUnder(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "selects year \"From\" 2017 \"To\" 2020",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsYear(java.lang.String,int,java.lang.String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "selects \"BMW\" under \"Any Make\" from \"Make, Model \u0026 Trim\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.selectsUnderFrom(java.lang.String,java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "clicks \"Search\" button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.clicksButton(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "gets search results",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.autotrader.searchSteps.AdvancedSearchStepDefs.getsSearchResults()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });
