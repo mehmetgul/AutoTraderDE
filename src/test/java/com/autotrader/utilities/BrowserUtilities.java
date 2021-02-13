@@ -19,7 +19,7 @@ public class BrowserUtilities {
     }
 
     /**
-     * Clicks on an element using JavaScript
+     * Scroll down to the element using JavaScript
      *
      * @param element
      */
