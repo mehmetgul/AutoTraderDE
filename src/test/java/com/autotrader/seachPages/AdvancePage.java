@@ -110,11 +110,12 @@ public class AdvancePage extends Base {
 		waitSomeTime(7000L);
 		MyDriver.get().manage().deleteAllCookies();
 		advanceSearch.click();
-		MyDriver.get().manage().deleteAllCookies();
+
 
 	}
 
 	public void veryZipCode(String zip) {
+		MyDriver.get().manage().deleteAllCookies();
 		zipCode.clear();
 		zipCode.sendKeys(zip);
 		logger.info("{} has entered as Zip Code", zip);
@@ -144,18 +145,23 @@ public class AdvancePage extends Base {
 		Select selectTo = new Select(endYear);
 		selectTo.selectByValue(toYear);
 		waitSomeTime(3000L);
+
 		logger.info("Successfully {} and {} chosen", fromYear, toYear);
+	//	MyDriver.get().manage().deleteAllCookies();
 	}
 
 	public void selectModel(String model) {
 		scrollDown(anyMakeAdvanceSearch); // optional
 		Select select = new Select(anyMakeAdvanceSearch);
 		select.selectByValue(model);
+		waitSomeTime(3000L);
 
 	}
 
 	public void clickSearchButton() {
+
 		scrollDown(advanceSearchButton);
+
 		advanceSearchButton.click();
 	}
 }

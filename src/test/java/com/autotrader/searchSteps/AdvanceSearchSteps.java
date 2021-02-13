@@ -1,6 +1,7 @@
 package com.autotrader.searchSteps;
 
 import com.autotrader.seachPages.AdvancePage;
+import com.autotrader.seachPages.ResultPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ public class AdvanceSearchSteps {
 	//Logger objecti olusturuyoruz.
 	Logger logger = LoggerFactory.getLogger(AdvanceSearchSteps.class);
 	AdvancePage advancePage = new AdvancePage();
+	ResultPage resultPage=new ResultPage();
 
 	@Given("User click Advance Search link on the home page")
 	public void userClickAdvanceSearchlinkOnTheHomePage() {
@@ -57,10 +59,13 @@ public class AdvanceSearchSteps {
 	@Then("User verifies that he is in result page")
 	public void user_verifies_that_he_is_in_result_page() {
 
+		resultPage.verifyTitle();
+
 	}
 
 	@Then("User verifies that he sees only {string} cars in listing")
-	public void user_verifies_that_he_sees_only_cars_in_listing(String string) {
+	public void user_verifies_that_he_sees_only_cars_in_listing(String car) {
+		resultPage.verifyOnlyBMWListing(car);
 
 	}
 
