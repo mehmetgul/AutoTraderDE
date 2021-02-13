@@ -126,7 +126,7 @@ public class MyDriver {
 	}
 
 	public static void close() {
-		//DriverPool.get().quit();
+		DriverPool.get().quit();
 		DriverPool.remove();
 	}
 }
