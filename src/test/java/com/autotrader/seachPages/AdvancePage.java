@@ -1,8 +1,6 @@
 package com.autotrader.seachPages;
 
-import com.autotrader.searchSteps.MyStepdefs;
 import com.autotrader.utils.MyDriver;
-import io.github.bonigarcia.wdm.SeleniumServerStandaloneManager;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

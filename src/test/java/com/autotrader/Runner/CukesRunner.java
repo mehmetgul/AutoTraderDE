@@ -12,6 +12,7 @@ import io.cucumber.junit.Cucumber;
         },
         glue = "com/autotrader/searchSteps",
         features = "src/test/resources/features/",
+        strict = true, //Removes some red lines after execution in Terminal
         dryRun= false,
         tags = "@wip"
 )

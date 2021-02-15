@@ -4,8 +4,6 @@ import com.autotrader.utils.MyDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import java.sql.Driver;
-
 public class BrowserUtilities {
 
     /**

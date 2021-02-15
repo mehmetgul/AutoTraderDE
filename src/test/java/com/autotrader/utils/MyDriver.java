@@ -34,41 +34,21 @@ public class MyDriver {
 		//if this thread doesn't have a web Driver yet - create it and add to pool
 		if (DriverPool.get() == null) {
 			logger.info("===============================================================");
-			logger.info("|          Environment : " + ConfigurationReader.getProperty("env"));
-			logger.info("|          Operating System : " + System.getProperty("os.name"));
-			logger.info("|          Browser: " + ConfigurationReader.getProperty("browser"));
+			logger.info("|    Environment      : " + ConfigurationReader.getProperty("env"));
+			logger.info("|    Operating System : " + System.getProperty("os.name"));
+			logger.info("|    Browser          : " + ConfigurationReader.getProperty("browser"));
 			logger.info("===============================================================\n");
 			// this line will tell which browser should open based on the value from properties file
 			String browserParamFromEnv = System.getProperty("browser");
 			String browser = browserParamFromEnv == null ? ConfigurationReader.getProperty("browser") : browserParamFromEnv;
 			switch (browser) {
 				case "chrome":
-
-
 					WebDriverManager.chromedriver().setup();
-					DesiredCapabilities caps = new DesiredCapabilities();
-
-					/**
-					 *We have disabled the cookies in below ChromeOptions
-					 * You need to add this feature to your configuration.properties
-					 * Add cookiesEnableDisable=2  (disable the cookies)
-					 * Add cookiesEnableDisable =0  (enable the cookies)
-					 */
-					ChromeOptions options = new ChromeOptions();
-					Map<String, Object> prefs = new HashMap<String, Object>();
-					Map<String, Object> profile = new HashMap<String, Object>();
-					Map<String, Object> contentSettings = new HashMap<String, Object>();
-
-					contentSettings.put("cookies", ConfigurationReader.getProperty("cookiesEnableDisable"));
-					profile.put("managed_default_content_settings", contentSettings);
-					prefs.put("profile", profile);
-					options.setExperimentalOption("prefs", prefs);
-					caps.setCapability(ChromeOptions.CAPABILITY, options);
-
-					DriverPool.set(new ChromeDriver(options));
+					DriverPool.set(new ChromeDriver(deleteCookiesInChrome()));
 					break;
 				case "chrome_headless":
 					WebDriverManager.chromedriver().setup();
+					DriverPool.set(new ChromeDriver(deleteCookiesInChrome()));
 					DriverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
 					break;
 				case "firefox":
@@ -128,5 +108,29 @@ public class MyDriver {
 	public static void close() {
 		DriverPool.get().quit();
 		DriverPool.remove();
+	}
+
+	public static ChromeOptions deleteCookiesInChrome(){
+		DesiredCapabilities caps = new DesiredCapabilities();
+
+		/**
+		 *We have disabled the cookies in below ChromeOptions
+		 * You need to add this feature to your configuration.properties
+		 * Add cookiesEnableDisable=2  (disable the cookies)
+		 * Add cookiesEnableDisable =0  (enable the cookies)
+		 */
+		ChromeOptions options = new ChromeOptions();
+		Map<String, Object> prefs = new HashMap<String, Object>();
+		Map<String, Object> profile = new HashMap<String, Object>();
+		Map<String, Object> contentSettings = new HashMap<String, Object>();
+
+		contentSettings.put("cookies", ConfigurationReader.getProperty("cookiesEnableDisable"));
+		profile.put("managed_default_content_settings", contentSettings);
+		prefs.put("profile", profile);
+		options.setExperimentalOption("prefs", prefs);
+		caps.setCapability(ChromeOptions.CAPABILITY, options);
+		return options;
+
+
 	}
 }

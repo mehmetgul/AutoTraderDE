@@ -1,6 +1,5 @@
 package com.autotrader.searchSteps;
 
-import com.autotrader.seachPages.Base;
 import com.autotrader.utils.ConfigurationReader;
 import com.autotrader.utils.MyDriver;
 
@@ -33,7 +32,7 @@ public class Hooks {
 	public void after(Scenario scenario){
 		if(scenario.isFailed()){
 			logger.error("!!!!Test Failed! check the screenshot!!!!");
-			byte[] screenshot= ((TakesScreenshot)MyDriver.get()).getScreenshotAs(OutputType.BYTES);
+			byte[] screenshot= ((TakesScreenshot) MyDriver.get()).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot,"images/png","Screenshot");
 			//scenario.embed(screenshot,"images/png"); versiyon 4.7.4
 

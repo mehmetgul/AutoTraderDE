@@ -1,9 +1,9 @@
-@wip
+@all
   Feature: Advanced Search
 
     Background:
       Given User is in landing page
-
+@wip
       Scenario: Happy path
         When the user clicks on "Advanced Search" button
         And enters 30004 in the Zip Code text box

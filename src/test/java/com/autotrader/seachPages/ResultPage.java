@@ -39,7 +39,7 @@ public class ResultPage  extends Base{
 	}
 
 	public void verifyOnlyBMWListing(String car) {
-		List<WebElement> list=MyDriver.get().findElements(By.xpath("//h2[contains(@data-cmp,'subheading')]"));
+		List<WebElement> list= MyDriver.get().findElements(By.xpath("//h2[contains(@data-cmp,'subheading')]"));
 
 		int count=0;
 		int nonBMWcount=0;

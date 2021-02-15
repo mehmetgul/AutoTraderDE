@@ -3,7 +3,6 @@ package com.autotrader.seachPages;
 
 
 import com.autotrader.utils.MyDriver;
-import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
